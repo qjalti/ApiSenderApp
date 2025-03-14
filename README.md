@@ -2,7 +2,7 @@
 
 ## Quick start
 
-### Algorythm
+### Ready
 
 ```bash
 npm install -g expo-cli
@@ -16,9 +16,13 @@ expo init ApiSenderApp
 cd ApiSenderApp
 ```
 
+### Develop
+
 ```bash
 npx expo start
 ```
+
+### Build
 
 ```bash
 npm install -g eas-cli
@@ -33,9 +37,17 @@ eas build --platform android
 ```
 
 ```bash
-java -jar bundletool.jar build-apks --bundle=your-app.aab --output=your-app.apks --mode=universal
+cd bundletool
 ```
 
+Изменить в строке ниже значения
+- --output
+- --bundle
+
 ```bash
-java -jar bundletool-all-1.18.1.jar build-apks --bundle=321fa.aab --output=321fa.apks --mode=universal --ks=my-upload-key.keystore --ks-key-alias=my-key-alias --ks-pass=pass:FJHbJObir2# --key-pass=pass:FJHbJObir2#
+java -jar bundletool-all-1.18.1.jar build-apks --bundle=FILENAME.aab --output=FILENAME.apks --mode=universal --ks=my-upload-key.keystore --ks-key-alias=my-key-alias --ks-pass=pass:FJHbJObir2# --key-pass=pass:FJHbJObir2#
 ```
+
+### Рекомендации
+
+Файлы с расширением .apks можно установить при помощи [SAI](https://github.com/Aefyr/SAI)
